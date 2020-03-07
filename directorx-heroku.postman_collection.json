@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "a99c2f89-9721-48de-8fce-deccf45da51c",
+		"name": "directorx-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1VUkdNVEExTWpsRlJUVkRPRFJCTWprMk1ERTRSVEUyUVVFeFFVTkJRVE5CTlRnMFF6STBNdyJ9.eyJpc3MiOiJodHRwczovL2JvbHRvbi5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU2M2IyMTZjNmRiYzkwZDNkZTE2NDY5IiwiYXVkIjoiY2FzdGluZyIsImlhdCI6MTU4MzU5OTE1NiwiZXhwIjoxNTgzNjg1NTU2LCJhenAiOiJFTkFqOXZjT3dIRDI2OU1lWFVJNERQMjJDa1VHN01TTiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.hxKkdNKjLdpQ9zxjxtcQJBs3osklikcNtmLFWSuMWJyI0JejAd3xX3pDSQS_7LVFci6NLNP4no1HNbM5TpfTXAq5YyfZnPdkHDKyxxRcNLe13xT7z3YTLFGnE4kumWhxQd9rs7DGZrTsLOgRQYdHnecZT4RAUNnKs_0mIWw4TMcenXeGvLSQvjBJo53bzJWHk2k-lfJyRJFfAdWfjQR5rrEIC-hP3Z-tpEHeQAcYmX5IQhhTYydM8rJ-zGU9S0d3xg406OV0dJLhXBDWHN-gBR3JX7AWv0KwfZcazJaw6lVpMpsHndZv5rA2FdmUTGIGwtKfZsA4U1Cdx2Fcf2yF4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/movies",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1VUkdNVEExTWpsRlJUVkRPRFJCTWprMk1ERTRSVEUyUVVFeFFVTkJRVE5CTlRnMFF6STBNdyJ9.eyJpc3MiOiJodHRwczovL2JvbHRvbi5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWUyMDZhMjIzNTVhOWUwZThiYWNlOTQ2IiwiYXVkIjoiY2FzdGluZyIsImlhdCI6MTU4MzU5ODk2MywiZXhwIjoxNTgzNjg1MzYzLCJhenAiOiJFTkFqOXZjT3dIRDI2OU1lWFVJNERQMjJDa1VHN01TTiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImNyZWF0ZTptb3ZpZXMiLCJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImVkaXQ6YWN0b3JzIiwiZWRpdDptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyJdfQ.e8UfSTzN19jLKofJ7Hpy-7OypWVjEk-DU9pwjYHtqv7I6qek-W-RuD0Dv1fw83bQtLatOYkSMnbnj48q_XKW_LUbpvCjhf5h6k_NwVmYbxTmduY1gCYSNPUZPFjUMex6LhdtzmervIq3ArsjgzqUtNW_FfzJC8cmf6lmhMGlAhEKDquEsrL3LeNkZULHnC7XtMfY4ds3qooRyum7zXPqSGinrOQD18IT8PcwYEiiuGF4hdsDa4PuIz4vnyuNxxx-b2o78XrMjgoFfWpodN7V2T53edDdfrmH3_uOsxK0o4QphvpIhen1diVoB9ut4FPKI7bbpzqI_uHPicsDtOYzxw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Predtor\",\n\t\"release_date\": \"2015-05-16\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/movies",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1VUkdNVEExTWpsRlJUVkRPRFJCTWprMk1ERTRSVEUyUVVFeFFVTkJRVE5CTlRnMFF6STBNdyJ9.eyJpc3MiOiJodHRwczovL2JvbHRvbi5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWUxMWQxOTViODc2N2QwZTkzN2ZjOTQ3IiwiYXVkIjoiY2FzdGluZyIsImlhdCI6MTU4MzU5OTA4MCwiZXhwIjoxNTgzNjg1NDgwLCJhenAiOiJFTkFqOXZjT3dIRDI2OU1lWFVJNERQMjJDa1VHN01TTiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJlZGl0OmFjdG9ycyIsImVkaXQ6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.OSbfKesfOJ1aYq3kEVAaFY8s8lP6g8d-D-V2wZabiDqod-aZZdBfEbOLcuPsJArydDsF4JQ3EfKv5ytl4qowReE9-V3CFZB4ymRtpsqIpPfXT2t9nibyXAGSUs1wLde2EAZxskffax9wkw1caoyq-SuFQvovAOJhbnu4pwy2NBsPFtDUSU_uW-ImKoP9Q83R1Bm0DB9E-7eYw2HcY_ULrhW9cAlhL5eVgLyeIuRrciwvXbJ23-z1HTpbGMJmCODjJDw3H9Gn3MOua6yt8Lhqs02Xqz-QgP-XgnMuHD53ZqKgcxMyA61qpUqiam1bnhLrSNKGLuYSFSuL0LyahnOE6Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"The avengers\",\n\t\"release_date\": \"2019-10-22\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/movies/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1VUkdNVEExTWpsRlJUVkRPRFJCTWprMk1ERTRSVEUyUVVFeFFVTkJRVE5CTlRnMFF6STBNdyJ9.eyJpc3MiOiJodHRwczovL2JvbHRvbi5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWUyMDZhMjIzNTVhOWUwZThiYWNlOTQ2IiwiYXVkIjoiY2FzdGluZyIsImlhdCI6MTU4MzU5ODk2MywiZXhwIjoxNTgzNjg1MzYzLCJhenAiOiJFTkFqOXZjT3dIRDI2OU1lWFVJNERQMjJDa1VHN01TTiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImNyZWF0ZTptb3ZpZXMiLCJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImVkaXQ6YWN0b3JzIiwiZWRpdDptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyJdfQ.e8UfSTzN19jLKofJ7Hpy-7OypWVjEk-DU9pwjYHtqv7I6qek-W-RuD0Dv1fw83bQtLatOYkSMnbnj48q_XKW_LUbpvCjhf5h6k_NwVmYbxTmduY1gCYSNPUZPFjUMex6LhdtzmervIq3ArsjgzqUtNW_FfzJC8cmf6lmhMGlAhEKDquEsrL3LeNkZULHnC7XtMfY4ds3qooRyum7zXPqSGinrOQD18IT8PcwYEiiuGF4hdsDa4PuIz4vnyuNxxx-b2o78XrMjgoFfWpodN7V2T53edDdfrmH3_uOsxK0o4QphvpIhen1diVoB9ut4FPKI7bbpzqI_uHPicsDtOYzxw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/movies/2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"movies",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post actor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1VUkdNVEExTWpsRlJUVkRPRFJCTWprMk1ERTRSVEUyUVVFeFFVTkJRVE5CTlRnMFF6STBNdyJ9.eyJpc3MiOiJodHRwczovL2JvbHRvbi5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWUxMWQxOTViODc2N2QwZTkzN2ZjOTQ3IiwiYXVkIjoiY2FzdGluZyIsImlhdCI6MTU4MzU5OTA4MCwiZXhwIjoxNTgzNjg1NDgwLCJhenAiOiJFTkFqOXZjT3dIRDI2OU1lWFVJNERQMjJDa1VHN01TTiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJlZGl0OmFjdG9ycyIsImVkaXQ6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.OSbfKesfOJ1aYq3kEVAaFY8s8lP6g8d-D-V2wZabiDqod-aZZdBfEbOLcuPsJArydDsF4JQ3EfKv5ytl4qowReE9-V3CFZB4ymRtpsqIpPfXT2t9nibyXAGSUs1wLde2EAZxskffax9wkw1caoyq-SuFQvovAOJhbnu4pwy2NBsPFtDUSU_uW-ImKoP9Q83R1Bm0DB9E-7eYw2HcY_ULrhW9cAlhL5eVgLyeIuRrciwvXbJ23-z1HTpbGMJmCODjJDw3H9Gn3MOua6yt8Lhqs02Xqz-QgP-XgnMuHD53ZqKgcxMyA61qpUqiam1bnhLrSNKGLuYSFSuL0LyahnOE6Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Tyler perry\",\n\t\"age\": 57,\n\t\"gender\": \"male\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/actors",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get actors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1VUkdNVEExTWpsRlJUVkRPRFJCTWprMk1ERTRSVEUyUVVFeFFVTkJRVE5CTlRnMFF6STBNdyJ9.eyJpc3MiOiJodHRwczovL2JvbHRvbi5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU2M2IyMTZjNmRiYzkwZDNkZTE2NDY5IiwiYXVkIjoiY2FzdGluZyIsImlhdCI6MTU4MzU5OTE1NiwiZXhwIjoxNTgzNjg1NTU2LCJhenAiOiJFTkFqOXZjT3dIRDI2OU1lWFVJNERQMjJDa1VHN01TTiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.hxKkdNKjLdpQ9zxjxtcQJBs3osklikcNtmLFWSuMWJyI0JejAd3xX3pDSQS_7LVFci6NLNP4no1HNbM5TpfTXAq5YyfZnPdkHDKyxxRcNLe13xT7z3YTLFGnE4kumWhxQd9rs7DGZrTsLOgRQYdHnecZT4RAUNnKs_0mIWw4TMcenXeGvLSQvjBJo53bzJWHk2k-lfJyRJFfAdWfjQR5rrEIC-hP3Z-tpEHeQAcYmX5IQhhTYydM8rJ-zGU9S0d3xg406OV0dJLhXBDWHN-gBR3JX7AWv0KwfZcazJaw6lVpMpsHndZv5rA2FdmUTGIGwtKfZsA4U1Cdx2Fcf2yF4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/actors",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit actor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1VUkdNVEExTWpsRlJUVkRPRFJCTWprMk1ERTRSVEUyUVVFeFFVTkJRVE5CTlRnMFF6STBNdyJ9.eyJpc3MiOiJodHRwczovL2JvbHRvbi5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWUxMWQxOTViODc2N2QwZTkzN2ZjOTQ3IiwiYXVkIjoiY2FzdGluZyIsImlhdCI6MTU4MzU5OTA4MCwiZXhwIjoxNTgzNjg1NDgwLCJhenAiOiJFTkFqOXZjT3dIRDI2OU1lWFVJNERQMjJDa1VHN01TTiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJlZGl0OmFjdG9ycyIsImVkaXQ6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.OSbfKesfOJ1aYq3kEVAaFY8s8lP6g8d-D-V2wZabiDqod-aZZdBfEbOLcuPsJArydDsF4JQ3EfKv5ytl4qowReE9-V3CFZB4ymRtpsqIpPfXT2t9nibyXAGSUs1wLde2EAZxskffax9wkw1caoyq-SuFQvovAOJhbnu4pwy2NBsPFtDUSU_uW-ImKoP9Q83R1Bm0DB9E-7eYw2HcY_ULrhW9cAlhL5eVgLyeIuRrciwvXbJ23-z1HTpbGMJmCODjJDw3H9Gn3MOua6yt8Lhqs02Xqz-QgP-XgnMuHD53ZqKgcxMyA61qpUqiam1bnhLrSNKGLuYSFSuL0LyahnOE6Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Hugh jackman\",\n\t\"age\": 63,\n\t\"gender\": \"Male\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/actors/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"actors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete actor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1VUkdNVEExTWpsRlJUVkRPRFJCTWprMk1ERTRSVEUyUVVFeFFVTkJRVE5CTlRnMFF6STBNdyJ9.eyJpc3MiOiJodHRwczovL2JvbHRvbi5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWUxMWQxOTViODc2N2QwZTkzN2ZjOTQ3IiwiYXVkIjoiY2FzdGluZyIsImlhdCI6MTU4MzU5OTA4MCwiZXhwIjoxNTgzNjg1NDgwLCJhenAiOiJFTkFqOXZjT3dIRDI2OU1lWFVJNERQMjJDa1VHN01TTiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJlZGl0OmFjdG9ycyIsImVkaXQ6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.OSbfKesfOJ1aYq3kEVAaFY8s8lP6g8d-D-V2wZabiDqod-aZZdBfEbOLcuPsJArydDsF4JQ3EfKv5ytl4qowReE9-V3CFZB4ymRtpsqIpPfXT2t9nibyXAGSUs1wLde2EAZxskffax9wkw1caoyq-SuFQvovAOJhbnu4pwy2NBsPFtDUSU_uW-ImKoP9Q83R1Bm0DB9E-7eYw2HcY_ULrhW9cAlhL5eVgLyeIuRrciwvXbJ23-z1HTpbGMJmCODjJDw3H9Gn3MOua6yt8Lhqs02Xqz-QgP-XgnMuHD53ZqKgcxMyA61qpUqiam1bnhLrSNKGLuYSFSuL0LyahnOE6Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/actors/3",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"actors",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3b738cd9-5564-493f-a4e5-06e8bb5fc2fd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "99a9ed7c-1a53-4fc9-a5d9-f28c1070e2e9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7732bb53-9f5f-4a64-8b5c-a21bac0874b5",
+			"key": "host",
+			"value": "https://directox.herokuapp.com/",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
